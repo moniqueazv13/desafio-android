@@ -1,10 +1,9 @@
-package com.picpay.desafio.android.data
+package com.picpay.desafio.android.data.local
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.picpay.desafio.android.UserDAO
 import com.picpay.desafio.android.domain.model.UserModel
 
 @Database(entities = [UserModel::class], version = 1)

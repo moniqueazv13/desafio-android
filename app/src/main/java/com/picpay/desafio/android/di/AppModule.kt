@@ -1,6 +1,6 @@
 package com.picpay.desafio.android.di
 
-import com.picpay.desafio.android.data.UserDB
+import com.picpay.desafio.android.data.local.UserDB
 import com.picpay.desafio.android.data.remote.PicPayService
 import com.picpay.desafio.android.data.repository.*
 import com.picpay.desafio.android.domain.useCases.UserDataUseCase

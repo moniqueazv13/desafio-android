@@ -21,6 +21,7 @@ buildscript {
         junit_version = '4.12'
         mockito_version = '2.27.0'
         mockito_kotlin_version = '2.1.0'
+        mockk_version = '1.10.6'
 
         test_runner_version = '1.1.1'
         espresso_version = '3.1.1'

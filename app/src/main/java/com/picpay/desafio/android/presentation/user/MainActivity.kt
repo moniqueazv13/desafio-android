@@ -5,7 +5,6 @@ import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.picpay.desafio.android.R
 import com.picpay.desafio.android.databinding.ActivityMainBinding
-import com.picpay.desafio.android.domain.model.User
 import com.picpay.desafio.android.domain.model.UserModel
 import com.picpay.desafio.android.hide
 import com.picpay.desafio.android.presentation.user.adapters.UserListAdapter
@@ -13,11 +12,12 @@ import com.picpay.desafio.android.presentation.user.viewModels.UserViewModel
 import com.picpay.desafio.android.show
 import com.picpay.desafio.android.viewBinding
 import org.koin.android.ext.android.inject
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MainActivity : BaseActivity() {
 
     override val binding by viewBinding(ActivityMainBinding::inflate)
-    private val userViewModel: UserViewModel by inject()
+    private val userViewModel: UserViewModel by viewModel()
 
     override fun initView() = with(binding) {
         recyclerView.apply {
@@ -26,6 +26,7 @@ class MainActivity : BaseActivity() {
         }
         userListProgressBar.show()
         initObservers()
+        userViewModel.getUserList()
     }
 
     private fun initObservers() = with(userViewModel) {

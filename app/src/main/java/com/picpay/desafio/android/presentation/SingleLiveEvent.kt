@@ -1,4 +1,4 @@
-package com.picpay.desafio.android
+package com.picpay.desafio.android.presentation
 
 import android.util.Log
 import androidx.annotation.MainThread
